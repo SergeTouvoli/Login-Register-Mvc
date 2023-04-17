@@ -11,7 +11,7 @@ Ce projet est un site web permettant à un utilisateur de s'inscrire, de se conn
 - Modifiez les paramètres de connexion à la base de données dans le fichier config.php.
 
 ## Utilisation 
-Url en ligne : 
+Url en ligne : https://sergedev.xyz/LoginRegisterMvc
 
 ## Fonctioannlités
 - Inscription/Connexion : permet à l'utilisateur de créer un compte et de se connecter à son compte existant.
