@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <?php include('views/inc/_head.phtml'); ?>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <h3>Inscription</h3>
+            <p>Veuillez remplir le formulaire pour vous inscrire.</p>
+                
+            <form action="" id="register-form" method="post">
+                <div class="mb-3">
+                    <label for="pseudo" class="form-label">Pseudo:</label>
+                    <input type="text" class="form-control" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" >
+                    <span class="error-message text-danger fw-bold" data-error="pseudo"></span>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" 
+                        placeholder="Entrez votre adresse email" name="email" >
+                    <span class="error-message text-danger fw-bold" data-error="email"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe:</label>
+                    <input type="password" class="form-control" id="pwd" 
+                        placeholder="Entrez votre mot de passe" name="password" >
+                    <span class="error-message text-danger fw-bold" data-error="password"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Confirmez votre mot de passe:</label>
+                    <input type="password" name="confirm_password"  class="form-control" id="confirm_password" placeholder="Confirmez votre mot de passe" >
+                    <span class="error-message text-danger fw-bold" data-error="confirm_password"></span>
+                </div>
+                <p>Déja inscrit ? <a href="<?= URL.LOGIN_PAGE ?>">Connectez-vous</a></p>
+                <button type="submit" class="btn btn-primary">Soumettre</button>
+            </form>
+        </div>
+        <script src="<?= URL ?>public/js/functions.js"></script>
+        <script src="<?= URL ?>public/js/register.js"></script>
+        <?php include('views/inc/_footer.phtml'); ?>
+    </body>
+</html>

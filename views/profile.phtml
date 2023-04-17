@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <?php include('views/inc/_head.phtml'); ?>
+        <link rel="stylesheet" href="<?= URL ?>public/css/profile.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-column align-items-center text-center">
+                                    <img id="output_image"  src="<?= URL ?>public/uploads/<?= $user['avatar'] ?>" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                    <span class="error-message-avatar text-center text-danger fw-bold" data-error="uploadError"></span>
+                                    <form class="mb-3" action="" id="updateAvatar" method ="post" enctype="multipart/form-data" >
+                                        <div class="avatar-img-btn mt-3 mb-3">
+                                            <input type="file" id="avatar-img" name="avatar" accept="image/*" class="main-btn" onchange="previewImage(event)" hidden>
+                                            <div class="d-flex mb-2">
+                                                <label for="avatar-img" class="btn btn-primary btn-hover m-auto h_40 mt-2 me-2"><i class="fas fa-camera"></i></label>
+                                                <button id="cancel" type="button" class="btn btn-danger btn-hover m-auto h_40 mt-2" style="display:none">Annuler</button>
+                                            </div>
+                                        </div>
+                                        <input id="validate" type="submit" name="changeAvatar" 
+                                            class="btn text-white btn-success btn-hover m-auto" style="display:none" 
+                                            value="Valider"/>	
+                                    </form> 
+                                    <div class="">
+                                        <h4><?= $user['pseudo'] ?></h4>
+                                        <p class="text-secondary mb-1">Inscrit le : <?= $user['created_at'] ?> </p>
+                                        <a href="<?= URL.LOGOUT ?>" class="btn btn-danger">Déconnexion</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <h2 class="m-3">Mes informations</h2>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Pseudo</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input type="text" class="form-control" value="<?= $user['pseudo'] ?>" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input type="text" class="form-control" value="<?= $user['email'] ?>" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Mot de passe</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input type="text" class="form-control" value="********" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="<?= URL ?>public/js/functions.js"></script>
+        <script src="<?= URL ?>public/js/profile.js"></script>
+        <?php include('views/inc/_footer.phtml'); ?>
+    </body>
+</html>
