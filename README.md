@@ -20,7 +20,7 @@ Url en ligne :
 - Messages d'erreur et de succès : utilise SweetAlert.js pour afficher des messages d'erreur et de succès clairs et conviviaux.
 
 ## Aperçu
-![Capture1](https://user-images.githubusercontent.com/82214916/232566173-f9e6998e-13ce-44e5-b311-cf1ff2dc4291.PNG)
 ![Capture2](https://user-images.githubusercontent.com/82214916/232566200-bec5c922-b502-4dbe-9302-554dc25b7f86.PNG)
+![Capture1](https://user-images.githubusercontent.com/82214916/232566173-f9e6998e-13ce-44e5-b311-cf1ff2dc4291.PNG)
 ![Capture3](https://user-images.githubusercontent.com/82214916/232566214-2a156e19-7a2a-4a3d-8343-03868bcd192b.PNG)
 ![Capture4](https://user-images.githubusercontent.com/82214916/232566222-e9824617-27c1-4676-b389-50b2fc157f0b.PNG)
